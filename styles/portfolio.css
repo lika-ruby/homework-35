@@ -335,19 +335,44 @@ body {
   fill: #2196f3;
 }
 
-.padding__hero {
-  padding: 40px 0;
+.hero__padding {
+  height: 60px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .hero__padding {
+    height: 80px;
+  }
 }
 
 .btn {
-  padding: 94px 0 25px;
+  padding: 60px 0 20px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    padding-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn {
+    padding: 94px 0 25px;
+  }
 }
 .btn__list {
+  max-width: 326px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 15px 8px;
+}
+@media screen and (min-width: 768px) {
+  .btn__list {
+    margin: 0 auto;
+    max-width: 575px;
+  }
 }
 .btn__btn {
   color: #212121;
@@ -368,7 +393,18 @@ body {
 }
 
 .article {
-  padding: 25px 0 94px;
+  padding: 20px 0 60px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .article {
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article {
+    padding: 25px 0 94px;
+  }
 }
 .article__list {
   display: flex;
@@ -376,11 +412,19 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 1200px;
-  width: 100%;
 }
 .article__item {
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .article__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .article__link {
   transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
@@ -395,9 +439,21 @@ body {
   border-left: 1px solid #eee;
   padding: 20px 24px;
 }
+@media screen and (min-width: 768px) {
+  .article__container {
+    padding: 20px 24px 0;
+    height: 146px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article__container {
+    padding: 20px 24px;
+    height: auto;
+  }
+}
 .article__photo {
   overflow: hidden;
-  height: 294px;
+  height: 100%;
   position: relative;
 }
 .article__content {
@@ -406,12 +462,22 @@ body {
 }
 .article__overlay {
   background-color: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
+  padding: 77px 24px;
   position: absolute;
   bottom: 0;
   left: 0;
   transform: translateY(101%);
   transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+@media screen and (min-width: 768px) {
+  .article__overlay {
+    padding: 49px 24px 77px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .article__overlay {
+    padding: 63px 24px;
+  }
 }
 .article__text {
   color: #fff;
